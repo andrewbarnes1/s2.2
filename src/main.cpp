@@ -11,15 +11,28 @@ void flash(void) {
   // Set phase to 0
   static unsigned int phase=0;
 
-  // On and Off pattern in seconds rather than ms
-  if(phase==0) blue.write(0); // on
-  if(phase==10) blue.write(1); // off
-  if(phase==20) blue.write(0);
-  if(phase==50) blue.write(1);
-  if(phase==120) blue.write(0);
-  phase++;
 
-  if(phase==120) phase=0;
+  // Seminar 2 exercise
+  if(phase==0) blue.write(0); // on
+  if(phase==1) blue.write(1); // off
+  if(phase==2) blue.write(0);
+  if(phase==5) blue.write(1);
+  if(phase==12) blue.write(0);
+  phase++;
+  if(phase==12) phase=0;
+
+/*
+  // Messing around with the timer
+  if(phase==0) blue.write(0);
+  if(phase==5) blue.write(1);
+  if(phase==10) blue.write(0);
+  if(phase==13) blue.write(1);
+  if(phase==15) blue.write(0);
+  if(phase==16) blue.write(0);
+  if(phase==17) blue.write(1);
+  phase++;
+  if(phase==18) phase = 0;
+*/
 
 }
 
